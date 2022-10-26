@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #f56033, #fb84df, #23a6d5, #2df3c5 );
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+    min-height: 100vh;
+    display: grid;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.container{
+    width: 450px;
+    border-radius: 7px;
+    background-color: #fff;
+    padding: 30px 25px 40px;
+}
+
+.container :where(textarea, input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.container textarea{
+    height: 270px;
+    resize: none;
+    padding: 8px 13px;
+    border: 1px solid #ccc;
+}
+
+.container .file-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.file-option .option{
+    width: calc(100% / 2 - 8px);
+}
+
+.file-option label{
+    font-family: "lemonada";
+    font-size: 15px;
+}
+
+.option :where(input, .select-menu){
+    height: 50px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+.option .select-menu .select{
+    height: 50px;
+    background: none;
+}
+
+.container .save-btn{
+    background-color: #23a6d5;
+    margin-top: 20px;
+    padding: 16px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.container textarea:valid ~ .save-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container .rester{
+    width: 50%;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #df0000;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 25%;
+    border: none;
+    transition: .6 ease-in-out;
+}
+
+footer{
+    text-align: center;
+    font-size: 18px;
+    background: #e8eaec;
+    background: center;
+    color: #fff;
+
+}
+
+.link{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    font-family: 'motairah';
+}
+
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        width: 365px;
+        border-radius: 7px;
+        background-color: #fff;
+        padding: 30px 25px 40px;
+        box-shadow: 
+        25px 29px 35px rgb(0 5 13 / 25%), 4px 4px 19px #5a5959;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        width: 350px;
+        border-radius: 7px;
+        background-color: #fff;
+        padding: 30px 25px 40px;
+    }
+}
